@@ -60,6 +60,7 @@ public class loginTest {
 	
 	public static void testCase1_verifyUrlRedirection()
 	{
+		//This test verifies if the redirected url is correct.
 		String redirectUrl = driver.getCurrentUrl();
 		try {
 		Assert.assertEquals(redirectUrl, prop.getProperty("expectedUrl"));
@@ -72,6 +73,7 @@ public class loginTest {
 	
 	public static void testCase2_loginWithInCorrectCredentials()
 	{
+		//This test makes sure a user cannot login using incorrect credentials.
 		try {
 			driver.findElement(By.id("login-user")).sendKeys(prop.getProperty("inCorrectUsername"));
 			driver.findElement(By.id("login-pass")).sendKeys(prop.getProperty("inCorrectPassword"));
@@ -86,6 +88,7 @@ public class loginTest {
 
 	public static void testCase3_loginWithCorrectCredentials()
 	{
+		//This test verifies login functionality with correct credentials.
 		try {
 			driver.findElement(By.id("login-user")).sendKeys(prop.getProperty("username"));
 			driver.findElement(By.id("login-pass")).sendKeys(prop.getProperty("password"));
@@ -100,7 +103,7 @@ public class loginTest {
 	
 	public static void testCase4_pageEditButtonShouldNotBeVisible()
 	{
-		//P.S here I am assuming the locator of the edit button
+		//P.S here I am assuming the locator of the edit button. This test makes sure edit button is not visible.
 		try {
 		Assert.assertEquals(0, driver.findElements(By.id("page-edit")).size());
 		}catch(AssertionError e) {
