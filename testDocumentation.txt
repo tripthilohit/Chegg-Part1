@@ -1,0 +1,31 @@
+Challenge 1: 
+
+Part 1 tests chegg-qa-challenge.herokuapp.com application.
+
+In addition to writing the tests specified, I would include more tests like:
+- All the navigation links works correctly
+- Home page
+	- verify Search field 
+- All pages link
+	- redirects to the correct page
+- Settings/'My Profile and authentication info' section
+	- if email displayed is correct
+	- password is not displayed
+	- verify if the reset password 
+	- display name is correct
+	- The fields are editable and the changes can be saved
+- verify the stats page
+	- Entries, uploads and Users are correct
+- Verify Logout functionality
+	
+Part 2 tests the EasyBib application.
+
+In addition to writing the tests specified, I would also verify
+- Creating a new Citation functionality
+	- Buttons like 'Website', 'Book' and other elements are present on the page
+	- If each link redirects to the correct page
+	- 'Search source types' field works correctly
+- Citation sorting functionality
+- Change style functionality 
+- Make sure 'Check My paper' is disabled until the user reaches minimum character limit.
+- Verify Header and Footer items
